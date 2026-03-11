@@ -19,7 +19,7 @@ const Contact = () => {
 
   // ✅ Fetch Contact Info
   useEffect(() => {
-    fetch("https://codesphereit.in/api/method/solutions.contact.contact_info")
+    fetch(`${import.meta.env.VITE_API_BASE_URL}${import.meta.env.VITE_CONTACT_INFO_API}`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch contact info");
         return res.json();
@@ -58,7 +58,7 @@ const Contact = () => {
       formPayload.append("msg", formData.msg);
 
       const response = await fetch(
-        "https://codesphereit.in/api/method/solutions.contact.contact",
+        `${import.meta.env.VITE_API_BASE_URL}${import.meta.env.VITE_CONTACT_FORM_API}`,
         {
           method: "POST",
           headers: {
@@ -167,7 +167,7 @@ const Contact = () => {
                   className="bg-white/10 backdrop-blur-md border border-white/20 p-3 rounded-xl hover:scale-110 transition"
                 >
                   <img
-                    src={`https://codesphereit.in${item.icon}`}
+                    src={`${import.meta.env.VITE_API_BASE_URL}${item.icon}`}
                     alt={item.title}
                     className="w-6 h-6 brightness-0 invert sepia hue-rotate-90 saturate-[5]"
                   />

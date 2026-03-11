@@ -27,7 +27,7 @@ const Navbar = () => {
 
   // Fetch logo from API
   useEffect(() => {
-    fetch("http://codesphereit.in/api/method/solutions.hero.hero")
+    fetch(`${import.meta.env.VITE_API_BASE_URL}${import.meta.env.VITE_HERO_API}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.data && data.data.logo) {

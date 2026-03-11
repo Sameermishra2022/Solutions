@@ -5,7 +5,7 @@ const Banner = () => {
   const [bannerData, setBannerData] = useState(null);
 
   useEffect(() => {
-    fetch("http://codesphereit.in/api/method/solutions.hero.hero")
+   fetch(`${import.meta.env.VITE_API_BASE_URL}${import.meta.env.VITE_HERO_API}`)
       .then((res) => res.json())
       .then((data) => {
         setBannerData(data.data);
@@ -45,7 +45,7 @@ const Banner = () => {
                           w-full max-w-xs md:max-w-sm lg:max-w-md">
 
             <img
-              src={`http://codesphereit.in${bannerData.hero_image}`}
+              src={`${import.meta.env.VITE_API_BASE_URL}${bannerData.hero_image}`}
               alt="Banner"
               className="w-full rounded-2xl"
             />
