@@ -96,11 +96,11 @@ const Navbar = () => {
               scrolled ? "text-gray-800" : "text-white"
             }`}
           >
-            <li className="hover:text-green-500 cursor-pointer">Expertise</li>
+            <li className="hover:text-green-500 cursor-pointer"><Link to="/expertise">Expertise</Link></li>
             <li className="hover:text-green-500 cursor-pointer"><Link to="/industries">Industries</Link></li>
-            <li className="hover:text-green-500 cursor-pointer">Insights</li>
+            <li className="hover:text-green-500 cursor-pointer"><Link to="/insights">Insights</Link></li>
             <li className="hover:text-green-500 cursor-pointer"><Link to="/about">About Us</Link></li>
-            <li className="hover:text-green-500 cursor-pointer">Careers</li>
+            <li className="hover:text-green-500 cursor-pointer"><Link to="/career">Carrers</Link></li>
           </ul>
 
 <Link to="/contact">
@@ -136,11 +136,11 @@ const Navbar = () => {
         >
           <div className="bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl py-6">
             <ul className="flex flex-col items-center gap-6 font-medium text-pink-200">
-              <li className="hover:text-green-600 cursor-pointer">Expertise</li>
-              <li className="hover:text-green-600 cursor-pointer">Industries</li>
-              <li className="hover:text-green-600 cursor-pointer">Insights</li>
+              <li className="hover:text-green-600 cursor-pointer"><Link to="/expertise">Expertise</Link></li>
+              <li className="hover:text-green-600 cursor-pointer"><Link to="/industries">Industries</Link></li>
+              <li className="hover:text-green-600 cursor-pointer"><Link to="/insights">Insights</Link></li>
               <li className="hover:text-green-600 cursor-pointer"><Link to="/about">About Us</Link></li>
-              <li className="hover:text-green-600 cursor-pointer">Careers</li>
+              <li className="hover:text-green-600 cursor-pointer"><Link to="/career">Carrers</Link></li>
 
 <Link to="/contact">
 <button className="bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600 transition">
